@@ -19,10 +19,13 @@
 <i class="fa fa-times" onclick="hide()"></i>
 <ul>
 <li><a href="">HOME</a></li>
-<li><a href="">ABOUT</a></li>
-<li><a href="">BLOG</a></li>
-<li><a href="">COURSES</a></li>
-<li><a href="">CONTACT</a></li>
+<li><a href="#facilities1">Facilities</a></li>
+<li><a href="#course1">COURSES</a></li>
+<li><a href="#campus1">Campus</a></li>
+
+<li><a href="#reviews1">Reviews</a></li>
+<li><a href="#about1">ABOUT</a></li>
+
 </ul>
 </div>
 <i class="fa fa-bars" aria-hidden="true" onclick="show()"></i>
@@ -35,7 +38,7 @@ Vist Us To Know More
 </a>
 </div>
 </section>
-<section class="course">
+<section class="course" id="course1">
 <h1>Courses We Offer</h1>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
 <div class="row">
@@ -53,7 +56,7 @@ Vist Us To Know More
 </div>
 </div>
 </section>
-<section class="campus">
+<section class="campus" id="campus1">
 <h1>Our Global Campus</h1>
 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
 <div class="row" style="display: flex;">
@@ -80,7 +83,7 @@ Vist Us To Know More
 
 
 
-<section class="facilities">
+<section class="facilities" id="facilities1">
 
     <h1>Our Facilities</h1>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
@@ -125,7 +128,7 @@ Vist Us To Know More
 <!-- 
 Testimonials.. -->
 
-<section class="testimonials">
+<section class="testimonials" id="reviews1">
 
 
 
@@ -202,7 +205,7 @@ CALL TO ACTION -->
 
 <!-- 
 Footer -->
-<section class="footer">
+<section class="footer" id="about1">
     <h4>About Us</h4>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Officiis vitae odio tempore modi quo libero, labore inventore harum tempora </p>
 
@@ -226,6 +229,11 @@ navLinks.style.display = 'block'; // Change display to 'block' to show the links
 function hide() {
 navLinks.style.right = '-200px'
 navLinks.style.display = 'none'; // Change display to 'none' to hide the links
+
+
+
+
+
 }
 
 
@@ -233,6 +241,42 @@ navLinks.style.display = 'none'; // Change display to 'none' to hide the links
 
 
 </script>
+
+
+
+
+<!-- <script>
+    const navLinks = document.getElementById('navlinks');
+function show() {
+  navLinks.style.right = '0';
+  navLinks.style.display = 'block';
+}
+
+function hide() {
+  navLinks.style.right = '-200px';
+  navLinks.style.display = 'none';
+
+  // The smooth scrolling code should be outside the hide() function
+}
+
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href').substring(1); // Remove the "#" symbol
+    const targetSection = document.getElementById(targetId);
+
+    if (targetSection) {
+      // Scroll to the target section smoothly
+      window.scrollTo({
+        top: targetSection.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+</script> -->
 <script src="https://kit.fontawesome.com/d70adb3340.js" crossorigin="anonymous"></script>
 </body>
 </html>
